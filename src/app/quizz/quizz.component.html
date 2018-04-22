@@ -1,0 +1,13 @@
+<main>
+    <h2>Question {{idQuest}}</h2>
+
+    <h3>{{data.listeQuest[idQuest].question}}</h3>
+
+    <button (click)="reponse(1)">{{data.listeQuest[idQuest].reponse1}}</button>
+    <button (click)="reponse(2)">{{data.listeQuest[idQuest].reponse2}}</button>
+    <button (click)="reponse(3)">{{data.listeQuest[idQuest].reponse3}}</button>
+    <button (click)="reponse(4)">{{data.listeQuest[idQuest].reponse4}}</button>
+
+    <p>Nombre de bonnes réponses : {{data.listeStats[0].nbVictoires}}</p>
+    <p>Nombre de réponses : {{data.listeStats[0].nbJouee}}</p>
+</main>
