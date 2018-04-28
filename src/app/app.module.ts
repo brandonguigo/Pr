@@ -10,13 +10,18 @@ import {NotfoundComponent} from "./notfound/notfound.component";
 import {ContactComponent} from "./contact/contact.component";
 import {QuizzComponent} from "./quizz/quizz.component";
 import {ScoreComponent} from "./score/score.component";
+import {AdminRoutingModule} from "./admin/admin.routing.module";
+import {AdminComponent} from "./admin/admin.component";
+import {AdminModules} from "./admin/admin.modules";
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         routing,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        AdminRoutingModule,
+        AdminModules
     ],
     declarations: [
         AppComponent,

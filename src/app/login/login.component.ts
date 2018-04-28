@@ -29,7 +29,7 @@ export class LoginComponent{
                 if (this.mdp == j.password){
 
                     if (j.id == "admin"){
-                        //TODO NAVIGUER VERS PAGE DES ADMIN
+                        this.router.navigate(['admin']);
                     }else{
                         localStorage.setItem("idj", this.id);
                         this.router.navigate(['/quizz', 0]);
@@ -37,7 +37,6 @@ export class LoginComponent{
                 }
             }
         }
-
     }
 
 }

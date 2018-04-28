@@ -3,8 +3,8 @@
 
     <form>
         <select id="nomMod">
-            <option *ngFor="let p of produits">{{p.nom}}</option>
+            <option *ngFor="let q of data.listeQuest">{{q.question}}</option>
         </select>
     </form>
-    <button (click)="affInfProd()">Afficher les informations du produit</button>
+    <button (click)="affInfProd()">Afficher la question</button>
 </main>

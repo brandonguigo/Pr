@@ -6,6 +6,7 @@ import {NotfoundComponent} from "./notfound/notfound.component";
 import {ContactComponent} from "./contact/contact.component";
 import {QuizzComponent} from "./quizz/quizz.component";
 import {ScoreComponent} from "./score/score.component";
+import {AdminComponent} from "./admin/admin.component";
 
 const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full'},

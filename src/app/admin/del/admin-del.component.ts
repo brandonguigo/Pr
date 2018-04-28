@@ -10,6 +10,7 @@ export class AdminDelComponent {
    private data : Data;
     private nomDel: string;
     private ind: any;
+    private j: number;
 
 
     constructor(){
