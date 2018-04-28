@@ -1,0 +1,10 @@
+<main>
+    <h2>Supprimer un produit</h2>
+
+    <form>
+        <select id="nomDel">
+            <option *ngFor="let p of produits">{{p.nom}}</option>
+        </select>
+    </form>
+    <button (click)="delProd()">Supprimer le produit</button>
+</main>

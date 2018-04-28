@@ -21,5 +21,6 @@ export class Data{
         this.listeQuest[9] = new Questions("Question 10", "1", "OK", "3", "4", 2);
 
         this.listeJoueur[0] = new Joueur("admin", "admin", 20, "azer@ty.com", "admin");
+        this.listeJoueur[1] = new Joueur("brandon", "brandon", 20, "brandon.guigo@gmail.com", "brandon");
     }
 }

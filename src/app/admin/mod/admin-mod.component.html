@@ -1,0 +1,10 @@
+<main>
+    <h3>Modifier le produit</h3>
+
+    <form>
+        <select id="nomMod">
+            <option *ngFor="let p of produits">{{p.nom}}</option>
+        </select>
+    </form>
+    <button (click)="affInfProd()">Afficher les informations du produit</button>
+</main>

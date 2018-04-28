@@ -27,8 +27,13 @@ export class LoginComponent{
         for (let j of this.data.listeJoueur){
             if (this.id == j.id){
                 if (this.mdp == j.password){
-                    localStorage.setItem("idj", this.id);
-                    this.router.navigate(['/quizz', 0]);
+
+                    if (j.id == "admin"){
+                        //TODO NAVIGUER VERS PAGE DES ADMIN
+                    }else{
+                        localStorage.setItem("idj", this.id);
+                        this.router.navigate(['/quizz', 0]);
+                    }
                 }
             }
         }
