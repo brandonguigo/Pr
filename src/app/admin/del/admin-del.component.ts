@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Produit} from "../../models/Models";
+import {Data} from "../../models/Data";
 
 @Component({
     selector : 'app-admin',
@@ -7,26 +7,26 @@ import {Produit} from "../../models/Models";
     styleUrls: [ './admin-del.component.css' ]
 })
 export class AdminDelComponent {
-    produits : Produit[];
+   private data : Data;
     private nomDel: string;
-    j = 0;
-    ind = -1;
+    private ind: any;
+
 
     constructor(){
-        this.produits = JSON.parse(localStorage.getItem("listeProd"));
+        this.data = JSON.parse(localStorage.getItem("data"));
     }
 
     delProd(){
-        this.nomDel = (<HTMLInputElement>document.getElementById('nomDel')).value;
-        for (let p of this.produits){
-            if (p.nom == this.nomDel){
-                this.ind = this.j;
-            }
-            this.j++;
-        }
-        this.produits.splice(this.ind, 1);
-        localStorage.setItem("listeProd", JSON.stringify(this.produits));
-        alert("Produit supprimé avec succès");
+         this.nomDel = (<HTMLInputElement>document.getElementById('nomDel')).value;
+        for (let q of this.data.listeQuest){
+             if (q.question == this.nomDel){
+                 this.ind = this.j;
+                }
+                this.j++;
+         }
+         this.data.listeQuest.splice(this.ind, 1);
+         localStorage.setItem("data", JSON.stringify(this.data));
+         alert("Question supprimée avec succès");
 
     }
 }

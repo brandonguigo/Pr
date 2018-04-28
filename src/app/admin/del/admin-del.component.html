@@ -3,8 +3,8 @@
 
     <form>
         <select id="nomDel">
-            <option *ngFor="let p of produits">{{p.nom}}</option>
+            <option *ngFor="let q of data.listeQuest">{{q.question}}</option>
         </select>
     </form>
-    <button (click)="delProd()">Supprimer le produit</button>
+    <button (click)="delProd()">Supprimer la question</button>
 </main>
